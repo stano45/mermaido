@@ -1,0 +1,45 @@
+[project]
+name = "mermaido"
+version = "0.1.0"
+description = "Render Mermaid diagrams from Python — no Node.js required"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Stanislav Kosorin", email = "stanokosorin4@gmail.com" },
+]
+requires-python = ">=3.9"
+keywords = ["mermaid", "diagrams", "charts", "render", "svg", "png"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Multimedia :: Graphics",
+]
+dependencies = [
+    "nodejs-bin>=18.4.0a4",
+    "platformdirs>=3.0.0",
+]
+
+[project.scripts]
+mermaido = "mermaido.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/stano45/mermaido"
+Repository = "https://github.com/stano45/mermaido"
+Issues = "https://github.com/stano45/mermaido/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=7.0",
+]
