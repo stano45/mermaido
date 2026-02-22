@@ -6,10 +6,10 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from nodejs import npm
+from nodejs_wheel import npm
 from platformdirs import user_cache_dir
 
-MMDC_VERSION = os.environ.get("MERMAIDO_MMDC_VERSION", "11.4.0")
+MMDC_VERSION = os.environ.get("MERMAIDO_MMDC_VERSION", "11.4.2")
 
 _CACHE = Path(user_cache_dir("mermaido"))
 _MMDC = _CACHE / "node_modules" / ".bin" / "mmdc"
@@ -39,9 +39,10 @@ def install() -> None:
     """Download mermaid-cli and Chromium (~200 MB). Only needed once."""
     _CACHE.mkdir(parents=True, exist_ok=True)
     _PUPPETEER_CFG.write_text(json.dumps(_PUPPETEER_ARGS))
-    npm.call(
+    npm(
         ["install", f"@mermaid-js/mermaid-cli@{MMDC_VERSION}"],
         cwd=str(_CACHE),
+        check=True,
     )
 
 

@@ -47,7 +47,7 @@ mermaido --help
 
 | Environment variable | Default | Description |
 |---|---|---|
-| `MERMAIDO_MMDC_VERSION` | `11.4.0` | mermaid-cli version to install |
+| `MERMAIDO_MMDC_VERSION` | `11.4.2` | mermaid-cli version to install |
 
 ## How it works
 

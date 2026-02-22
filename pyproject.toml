@@ -23,7 +23,7 @@ classifiers = [
     "Topic :: Multimedia :: Graphics",
 ]
 dependencies = [
-    "nodejs-bin>=18.4.0a4",
+    "nodejs-wheel>=22.0.0",
     "platformdirs>=3.0.0",
 ]
 
